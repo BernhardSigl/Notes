@@ -40,20 +40,20 @@ function render() {
 }
 
 function addNote() {
-    if ((titleField.value == 0) && (noteField.value == 0)) {
-        alert('Titel und Notiz eintragen!')
-    } else if (noteField.value == 0) {
-        alert('Notiz eintragen!');
-    } else if (titleField.value == 0) {
-        alert('Titel eintragen!');
-    } else {
-        let titleField = document.getElementById('titleField').value;
-        let noteField = document.getElementById('noteField').value;
-        titles.push(titleField);
-        notes.push(noteField);
-        render();
-        save();
-    }
+    // if ((titleField.value == 0) && (noteField.value == 0)) {
+    //     alert('Titel und Notiz eintragen!')
+    // } else if (noteField.value == 0) {
+    //     alert('Notiz eintragen!');
+    // } else if (titleField.value == 0) {
+    //     alert('Titel eintragen!');
+    // } else {
+    let titleField = document.getElementById('titleField').value;
+    let noteField = document.getElementById('noteField').value;
+    titles.push(titleField);
+    notes.push(noteField);
+    render();
+    save();
+    // }
 }
 function deleteNoteAndTitle(i) {
     let deleteTitle = titles.splice(i, 1);

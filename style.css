@@ -152,8 +152,7 @@ header {
 Notes
 */
 
-.contentInput,
-.contentOutput {
+.contentInput {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -162,12 +161,17 @@ Notes
     margin-right: 256px;
 }
 
-.contentInput {
-    margin-top: 88px;
+.contentOutput {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 32px;
+    gap: 16px;
 }
 
-.contentOutput {
-    margin-top: 32px;
+.contentInput {
+    margin-top: 88px;
 }
 
 .contentInput input,
@@ -176,16 +180,13 @@ Notes
     border: none;
     outline: none;
     border-radius: 8px;
-    /* -webkit-appearance: none; */
 }
 
 .titleField {
     width: 578px;
     height: 26px;
     padding: 8px;
-    /* -webkit-appearance: none; */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    /* -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 }
 
 .noteField {
@@ -216,11 +217,10 @@ Notes
 
 .card {
     padding: 8px;
-    margin-bottom: 16px;
-    width: 578px;
+    width: 300px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    /* -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
     background: #FFFFFF;
+    margin-bottom: 8px;
 }
 
 .noteAndGarbageIMG {
@@ -275,7 +275,7 @@ Media
     .contentOutput {
         width: 100%;
         display: flex;
-        margin: 32px 0 0 0;
+        margin: 32px 8px 8px;
         flex-direction: column;
     }
 
@@ -305,6 +305,10 @@ Media
     .card,
     .noteField,
     .titleField {
-        width: 270px;
+        width: 200px;
+    }
+
+    .contentOutput {
+        margin: 16px 0;
     }
 }
