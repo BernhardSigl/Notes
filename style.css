@@ -1,0 +1,310 @@
+/*
+Allgemein
+*/
+form {
+    /* -webkit-appearance: none; */
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    /* -webkit-appearance: none; */
+}
+
+.d-none {
+    display: none;
+}
+
+.innerBody {
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    margin: 0;
+    font-weight: 550;
+}
+
+p {
+    margin: 0;
+}
+
+/*
+/* Burger
+*/
+.overlay-menu {
+    position: absolute;
+    left: 0;
+    top: 64px;
+    z-index: 5;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom-right-radius: 32px;
+    border-top-right-radius: 32px;
+    width: 192px;
+    height: 80px;
+    transform: translateX(-194px);
+    transition: all 225ms ease-in-out;
+    background: #FEEFC3;
+    display: flex;
+    align-items: center;
+}
+
+.overlay-menu a {
+    margin-left: 80px;
+}
+
+/* .overlay-menu img {
+    width: 16px;
+    height: auto;
+    margin-left: 56px;
+    visibility: hidden;
+    cursor: pointer;
+} */
+
+.show-overlay-menu {
+    transform: translateX(0);
+}
+
+.close-button img {
+    width: 16px;
+}
+
+.garbage {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    width: 40px;
+}
+
+.garbage img {
+    width: 24px;
+    padding: 0 12px 0 12px;
+    height: 48px;
+    margin: 16px;
+    background: #FEEFC3;
+    border-radius: 100%;
+}
+
+/*
+Header
+*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background-color: white;
+    padding: 8px;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+}
+
+.headerLeft {
+    height: 48px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.headerLeft a {
+    display: flex;
+    align-items: center;
+    color: rgb(88, 88, 88);
+}
+
+.burgerSymbol {
+    width: 18px;
+    height: auto;
+    margin: 12px;
+    cursor: pointer;
+}
+
+.clipboardSymbol {
+    width: 32px;
+    height: auto;
+    padding-right: 8px;
+    margin-left: 16px;
+}
+
+.headerLeft button {
+    border: none;
+    background: none;
+}
+
+/*
+Notes
+*/
+
+.contentInput,
+.contentOutput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 88px;
+    margin-left: 256px;
+    margin-right: 256px;
+}
+
+.contentInput {
+    margin-top: 88px;
+}
+
+.contentOutput {
+    margin-top: 32px;
+}
+
+.contentInput input,
+.contentOutput input,
+.card {
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    /* -webkit-appearance: none; */
+}
+
+.titleField {
+    width: 578px;
+    height: 26px;
+    padding: 8px;
+    /* -webkit-appearance: none; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+}
+
+.noteField {
+    width: 578px;
+    height: 80px;
+    padding: 8px;
+    /* -webkit-appearance: none; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+}
+
+.addButtonLayout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addButtonLayout button {
+    width: 96px;
+    margin-top: 16px;
+    padding: 4px;
+    background: #FEEFC3;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    -webkit-appearance: none;
+    color: rgb(0, 0, 0);
+}
+
+.card {
+    padding: 8px;
+    margin-bottom: 16px;
+    width: 578px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    background: #FFFFFF;
+}
+
+.noteAndGarbageIMG {
+    display: flex;
+    justify-content: space-between;
+}
+
+.garbageInText {
+    width: 16px;
+    vertical-align: text-bottom;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.garbageTitle {
+    position: absolute;
+    height: 64px;
+    left: 50%;
+    right: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+Empty div on bottom
+*/
+.placeholderBottom {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* background: url('./img/paper-1217311_1920.jpg'); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+/*
+Media
+*/
+@media(max-width: 1000px) {
+    .contentInput {
+        width: 100%;
+        display: flex;
+        margin: 160px 0 0 0;
+        flex-direction: column;
+
+    }
+
+    .contentOutput {
+        width: 100%;
+        display: flex;
+        margin: 32px 0 0 0;
+        flex-direction: column;
+    }
+
+    /* .overlay-menu img {
+        visibility: visible;
+    } */
+
+    .card,
+    .noteField,
+    .titleField {
+        width: 300px;
+    }
+
+    .garbageTitle {
+        position: absolute;
+        height: 64px;
+        left: 80%;
+        /* right: 10%; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 340px) {
+
+    .card,
+    .noteField,
+    .titleField {
+        width: 270px;
+    }
+}
